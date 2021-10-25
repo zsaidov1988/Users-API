@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users API</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <h1 class="visually-hidden">Users List</h1>
+    <nav class="site-header__navbar navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Users</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main mb-5">
+    <section class="user">
+      <div class="container-fluid user-container">
+        <h2 class="text-center mt-3">Users API</h2>
+        <hr>
+        <div class="user__wrapper row mt-3">
+
+          <!-- 1-column - Users -->
+          <div class="col col-12 col-lg-4 border-start border-info">
+            <h3>Users</h3>
+            <p class="js-user-message"></p>
+            <ul class="list-unstyled js-user-list"></ul>
+          </div> <!-- 1-column - Users -->
+
+          <!-- 2-column - Posts -->
+          <div class="col col-12 col-lg-4 mt-3 mt-lg-0 border-start border-info">
+            <h3>Posts</h3>
+            <p class="js-post-message"></p>
+            <ul class="list-unstyled js-post-list"></ul>
+          </div><!-- 2-column - Posts -->
+
+          <!-- 3-column - Comments -->
+          <div class="col col-12 col-lg-4 mt-3 mt-lg-0 border-start border-info">
+            <h3>Comments</h3>
+            <p class="js-comment-message"></p>
+            <ul class="list-unstyled js-comment-list"></ul>
+          </div><!-- 3-column - Comments -->
+
+        </div><!-- row -->
+      </div><!-- container-fluid -->
+    </section><!-- user -->
+  </main>
+
+  <!-- Template for user -->
+  <template id="user-template">
+    <li class="mt-2 border border-primary border-1 rounded-1 p-1 position-relative">
+      <button type="button" class="btn btn-link link-button js-user-post-btn"></button>
+      <p class="m-0"><b>Email:</b> <a class="js-user-email-link" href=""></a></p>
+      <p class="m-0"><b>Country:</b> <span class="js-country-span"></span></p>
+      <p class="m-0"><b>Company:</b> <span class="js-company-span"></span></p>
+      <p class="m-0"><b>Website:</b> <a class="js-website-link" href=""></a></p>
+    </li>
+  </template>
+  <!-- Template for user -->
+
+  <!-- Template for post -->
+  <template id="post-template">
+    <li class="mt-2 border border-primary border-1 rounded-1 p-1">
+      <button type="button" class="btn btn-link text-start link-button js-post-name-btn"></button>
+      <p class="m-0"><b>Post:</b> <span class="js-post-span"></span></p>
+    </li>
+  </template>
+  <!-- Template for post -->
+
+  <!-- Template for comment -->
+  <template id="comment-template">
+    <li class="mt-2 border border-primary border-1 rounded-1 p-1">
+      <h4 class="h5">Title: <span class="js-comment-name"></span></h4>
+      <p class="m-0"><b>Email:</b> <a class="js-comment-email-link" href=""></a></p>
+      <p class="m-0"><b>Comment:</b> <span class="js-comment-span"></span></p>
+    </li>
+  </template>
+  <!-- Template for comment -->
+
+
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./js/util.js"></script>
+  <script src="./js/functions.js"></script>
+  <script src="./js/my.js"></script>
+</body>
+
+</html>
